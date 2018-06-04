@@ -32,9 +32,9 @@ def helpMessage() {
 * PARAMS
 */
 
-params.help = false,
-params.name = false,
-params.outdir // defined in nextflow.config
+params.help = false
+params.name = false
+// params.outdir // defined in nextflow.config
 
 // Show help message
 if (params.help){
