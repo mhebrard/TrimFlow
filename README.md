@@ -19,11 +19,11 @@ Reads folder must be in the current folder or a subdirectory -- ```./data/``` )
 * download the Singularity image
 
 ```
-singularity pull --name TrimFlow.img shub://mhebrard/TrimFlow
+singularity pull --name TrimFlow shub://mhebrard/TrimFlow
 ```
 
 * Execute the workflow within the image
 
  ```
- nextflow run mhebrard/Trimflow -with-singularity ./Trimflow.img --reads 'path/to/reads/*_R{1,2}*'
+ nextflow run mhebrard/TrimFlow -with-singularity ./Trimflow.simg --reads 'path/to/reads/*_R{1,2}*'
 ```
