@@ -8,21 +8,22 @@ workflow example managed with [Nextflow](https://www.nextflow.io/) within [Singu
 
 ## Quick start
 ( change ```path/to/reads/``` to match the folder of your data.
-Reads folder must be in the current folder or a subdirectory -- ./data/ )
+Reads folder must be in the current folder or a subdirectory -- ```./data/``` )
 
-* let nextflow download the workflow files and the singularity image automatically
+[//]: # (* let nextflow download the workflow files and the singularity image automatically)
+[//]: # (nextflow run mhebrard/TrimFlow  --reads 'path/to/reads/*_R{1,2}*')
+
+[//]: # (* download the workflow files manually)
+[//]: # (nextflow pull mhebrard/TrimFlow)
+
+* download the Singularity image
 
 ```
- nextflow run mhebrard/TrimFlow -with-singularity --reads 'path/to/reads/*_R{1,2}*'
- ```
+singularity pull --name TrimFlow.img shub://mhebrard/TrimFlow
+```
 
-* download the files first then run nextflow locally
+* Execute the workflow within the image
 
- ```
- nextflow pull mhebrard/TrimFlow
- ```
- ```
- singularity pull --name TrimFlow.img shub://mhebrard/TrimFlow
- ```
  ```
  nextflow run mhebrard/Trimflow -with-singularity ./Trimflow.img --reads 'path/to/reads/*_R{1,2}*'
+```

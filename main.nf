@@ -1,10 +1,7 @@
 #!/usr/bin/env nextflow
-/*
-* Inspire from nf-core-rnaseq
-*/
 
 flowName = "TrimFlow"
-version = 1.0
+version = 0.2
 
 /*
 * HELP
@@ -16,14 +13,14 @@ def helpMessage() {
   ===================================
   Usage:
   The typical command for running the pipeline is as follows:
-  nextflow run mhebrard/trimflow -with-singularity --reads '*_R{1,2}.fastq.gz'
+  nextflow run mhebrard/TrimFlow --reads 'data/*_R{1,2}*'
 
   Mandatory arguments:
-    --reads     Path to input data (must be surrounded with simple quotes)
+    --reads     Path to input data (./ or sub-folder path with a wildcard on filenames --*--)
 
   Options:
     --help      Display help and stop the execution
-    --name      Name for the pipeline run. If not specified, Nextflow will automatically generate a random name.
+    --name      Name for the pipeline run. If not specified, Nextflow will automatically generate a name.
     --outdir    The output directory where the results will be saved
     """.stripIndent()
 }
