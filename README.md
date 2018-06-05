@@ -25,3 +25,8 @@ nextflow pull mhebrard/TrimFlow
 singularity pull --name TrimFlow.simg shub://mhebrard/TrimFlow
 nextflow run mhebrard/TrimFlow -with-singularity ./Trimflow.simg --reads 'path/to/reads/*_R{1,2}*'
 ```
+
+## Version
+The first digit correspond to the version of the container image.
+
+The other digits represent the version of the nextflow script.

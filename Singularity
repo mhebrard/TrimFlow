@@ -8,7 +8,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu
 # Metadata
 %labels
   Maintainer mhebrard
-  Version v1.0
+  Version v1
 
 # image help
 %help

@@ -1,7 +1,7 @@
 #!/usr/bin/env nextflow
 
-flowName = "TrimFlow"
-version = v1.0
+flowName = 'TrimFlow'
+version = 'v1.1'
 
 /*
 * HELP
