@@ -71,7 +71,7 @@ def summary = [
 ]
 
 log.info "==================================="
-log.info " ${flowName}  ~  version ${version} "
+log.info " ${flowName}  ~  version ${version} ${workflow.revision ? workflow.revision : 'latest'}"
 log.info "==================================="
 log.info summary.collect { k,v -> "${k.padRight(15)}: $v" }.join("\n")
 log.info "==================================="
