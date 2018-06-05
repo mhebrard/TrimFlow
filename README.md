@@ -20,7 +20,7 @@ nextflow run mhebrard/TrimFlow  --reads 'path/to/reads/*_R{1,2}*'
 ```
 
 2. download the workflow files and the container image manually, then run it locally
-````
+```
 nextflow pull mhebrard/TrimFlow
 singularity pull --name TrimFlow.simg shub://mhebrard/TrimFlow
 nextflow run mhebrard/TrimFlow -with-singularity ./Trimflow.simg --reads 'path/to/reads/*_R{1,2}*'

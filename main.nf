@@ -1,7 +1,7 @@
 #!/usr/bin/env nextflow
 
 flowName = "TrimFlow"
-version = 1.0
+version = v1.0
 
 /*
 * HELP
@@ -9,7 +9,7 @@ version = 1.0
 def helpMessage() {
   log.info"""
   ========================
-  ${flowName} v${version}:${workflow.revision ? workflow.revision : 'latest'}
+  ${flowName} ${version}:${workflow.revision ? workflow.revision : 'latest'}
   ========================
   Usage:
   The typical command for running the pipeline is as follows:
@@ -71,7 +71,7 @@ def summary = [
 ]
 
 log.info "========================"
-log.info " ${flowName} v${version}:${workflow.revision ? workflow.revision : 'latest'}"
+log.info " ${flowName} ${version}:${workflow.revision ? workflow.revision : 'latest'}"
 log.info "========================"
 log.info summary.collect { k,v -> "${k.padRight(15)}: $v" }.join("\n")
 log.info "========================"
