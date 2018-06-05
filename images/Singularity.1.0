@@ -17,7 +17,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu
 
 # Actions executed on start in host
 %setup
-  echo "Setup !"
+  echo "Setup"
 
 # Files serve in the image
 #files
