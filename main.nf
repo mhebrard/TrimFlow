@@ -1,16 +1,16 @@
 #!/usr/bin/env nextflow
 
 flowName = "TrimFlow"
-version = 0.2
+version = 1.0
 
 /*
 * HELP
 */
 def helpMessage() {
   log.info"""
-  ===================================
-  ${flowName}  ~  version ${version}
-  ===================================
+  ========================
+  ${flowName} v${version}:${workflow.revision ? workflow.revision : 'latest'}
+  ========================
   Usage:
   The typical command for running the pipeline is as follows:
   nextflow run mhebrard/TrimFlow --reads 'data/*_R{1,2}*'
@@ -70,11 +70,11 @@ def summary = [
   'Script dir': workflow.projectDir
 ]
 
-log.info "==================================="
-log.info " ${flowName}  ~  version ${version} ${workflow.revision ? workflow.revision : 'latest'}"
-log.info "==================================="
+log.info "========================"
+log.info " ${flowName} v${version}:${workflow.revision ? workflow.revision : 'latest'}"
+log.info "========================"
 log.info summary.collect { k,v -> "${k.padRight(15)}: $v" }.join("\n")
-log.info "==================================="
+log.info "========================"
 
 
 /*
